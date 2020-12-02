@@ -34,7 +34,7 @@ clear
 # Desinstalando pacotes -------------------------------------------------
 echo -e "${seta} ${vermelho}Desinstalando pacotes desnecessários${fim}"
 sleep 2s
-sudo apt remove firefox-esr gnome-books gnome-maps gnome-contacts gnome-music gnome-software -y
+sudo apt remove firefox-esr gnome-books gnome-maps gnome-contacts gnome-music -y
 clear
 
 # Virt-manager ----------------------------------------------------------
@@ -61,23 +61,8 @@ clear
 # Hackerman ------------------------------------------------------------
 echo -e "${seta} ${ciano}Instalando aircrack-ng e utilitários${fim}"
 sleep 2s
-sudo apt install aircrack-ng usbutils tcpdump crunch -y
+sudo apt install aircrack-ng usbutils tcpdump crunch wifite -y
 clear
-
-# Gnome-terminal-transparency -------------------------------------------
-#echo -e "${seta} ${ciano}Instalando o gnome-terminal-transparency${fim}"
-#sleep 2s
-#clear
-
-# Sardi-icons ------------------------------------------------------------
-#echo -e "${seta} ${ciano}Instalando o sardi-icons${fim}"
-#sleep 2s
-#clear
-
-# Ant-dracula-theme-git ------------------------------------------------------------
-#echo -e "${seta} ${ciano}Instalando o ant-dracula-theme-git${fim}"
-#sleep 2s
-#clear
 
 # Google-chrome ---------------------------------------------------------
 echo -e "${seta} ${ciano}Instalando o google-chrome${fim}"
