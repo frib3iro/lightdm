@@ -29,7 +29,7 @@ sleep 1s
 clear
 
 # Atualizando os espelhos
-echo -e "${S} ${C}Atualizando...${F}"
+echo -e "${S} ${C}Atualizando${F}"
 sleep 1s
 echo $pass_user | sudo -S pacman -Syu --noconfirm
 clear
@@ -37,7 +37,7 @@ clear
 # Instalando pacotes ----------------------------------------------------
 echo -e "${S} ${C}Instalando pacotes necessários${F}"
 sleep 1s
-echo $pass_user | sudo -S pacman -S xorg-server xorg-xinit xf86-video-qxl bspwm sxhkd rofi feh compton xfce4-terminal firefox firefox-i18n-pt-br arandr nautilus --noconfirm
+echo $pass_user | sudo -S pacman -S xorg xorg-xinit xorg-xsetroot xf86-video-qxl bspwm sxhkd rofi feh picom xfce4-terminal firefox firefox-i18n-pt-br arandr xdg-user-dirs xdg-utils --noconfirm
 clear
 
 echo -e "${S} ${C}Configurando o bspwm${F}"
@@ -66,18 +66,20 @@ sleep 1s
 echo "setxkbmap br &" >> ~/.xinitrc
 echo "picom -f &" >> ~/.xinitrc
 echo "exec bspwm" >> ~/.xinitrc
-
 sleep 1s
 
-# sed -i 's/vsync = true/# vsync = true/g' /etc/xdg/picom.conf
-# sed -i 's/# vsync = false/vsync = false/g' /etc/xdg/picom.conf
+echo -e "${S} ${C}Editando o arquivo picom.conf${F}"
+sed -i 's/vsync = true/# vsync = true/g' /etc/xdg/picom.conf
+sleep 1s
+sed -i 's/# vsync = false/vsync = false/g' /etc/xdg/picom.conf
+sleep 1s
 
 vim .xinitrc
 sleep 1s
 
-echo -e "${S} ${C}Iniciando o xdg-update...${F}"
+echo -e "${S} ${C}Iniciando o xdg-update${F}"
 xdg-user-dirs-update
 sleep 1s
 #------------------------------------------------------------------------------------
 
-echo -e "${S} ${C}Instalação e configuração finalizada...${F}"
+echo -e "${S} ${C}Instalação e configuração finalizada${F}"

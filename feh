@@ -1,0 +1,57 @@
+# feh imagnes --------------------------------------------------------------
+feh --bg-scale caminho/da/imagem
+
+feh --bg-scale Imagens/imagem.png
+
+vim ~/.config/bspwm/bspwmrc
+
+${HOME}/.fehbg
+
+# rofi ---------------------------------------------------------------------
+$ rofi
+
+$ rofi-theme-selector
+
+$ rofi -show drun -show-icons
+
+$ vim ~/.config/sxhkd/sxhkdrc
+
+sed -i 's/super + @space/super + d/g' ~/.config/sxhkd/sxhkdrc
+
+sed -i 's/dmenu_run/rofi -show drun -show-icons/g' ~/.config/sxhkd/sxhkdrc
+
+# Fonts --------------------------------------------------------------------
+git clone https://github.com/terroo/fonts
+cd fonts
+mv fonts ~/.local/share/
+fc-cache -fv
+
+# Polybar ------------------------------------------------------------------
+cp /usr/share/doc/polybar/config ~/.config/polybar/config
+
+#Teste para ver se está funcionando: 
+
+polybar -c ~/.config/polybar/config example & # [Ctrl + D, ...]
+
+polybar example & # [Ctrl + D, ...]
+
+Tornar definitivo ao logar
+
+vim ~/.config/polybar/launch.sh
+
+git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
+
+chmod +x ~/.config/polybar/launch.sh
+
+./setup.sh
+
+rm -rf polybar-themes
+
+# Uso dos temas
+$ bash ~/.config/polybar/launch.sh
+
+echo '${HOME}/.config/polybar/launch.sh &' >> ~/.config/bspwm/bspwmrc
+
+Usage : launch.sh --theme
+
+
