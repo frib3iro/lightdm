@@ -1,8 +1,11 @@
-[greeter]
-background=/usr/share/backgrounds/archlinux/car02.jpg
+
+$ sudo pacman -S lightdm
+$ sudo pacman -S lightdm-gtk-greeter lightdm-slick-greeter lightdm-gtk-greeter-settings
+$ sudo systemctl enable lightdm.service
+
+[Greeter]
+background=/usr/share/backgrounds/archlinux/wallpaper.jpg
 
 $ dm-tool switch-to-greeter
 
-sudo pacman -S lightdm
-sudo pacman -S lightdm-gtk-greeter lightdm-slick-greeter lightdm-gtk-greeter-settings
-sudo systemctl enable lightdm.service
+$ sudo cp lightdm-gtk-greeter.conf slick-greeter.conf
