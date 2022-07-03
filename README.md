@@ -1,1 +1,1 @@
-# archteste
+# Instalação do lightdm
